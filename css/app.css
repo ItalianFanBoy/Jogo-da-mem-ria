@@ -1,0 +1,265 @@
+html {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body, .modal-body {
+    background: #ffffff url('https://i.imgur.com/goddWZ5.png');
+   /* Background pattern from Subtle Patterns */
+    font-family: 'Coda', cursive;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+}
+#minutes {
+    padding-left: 25px;
+}
+/* * Styles for the deck of cards */
+.deck {
+    width: 660px;
+    min-height: 550px;
+    background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.deck .card {
+    height: 115px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+.deck .card.open {
+    transform: rotateY(0);
+    background: #02b3e4;
+    cursor: default;
+}
+.deck .card.show {
+    font-size: 33px;
+}
+.deck .card.match {
+    cursor: default;
+    background: #02ccba;
+    font-size: 33px;
+}
+/* * Styles for the Score Panel */
+.score-panel {
+    min-width: 500px;
+}
+.score-panel .stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+.hide {
+    display: none;
+}
+.padd-title {
+    padding: 25px 40px 0 0;
+}
+.star {
+    font-size: 1.5em;
+    color: #FFF400;
+}
+.big {
+    font-size: 3.3em;
+}
+.bigger{
+    font-size: 7.5em;
+}
+.font-big {
+    font-size: 3em;
+}
+.font-small {
+    font-size: 1.5em;
+}
+.noClick {
+    pointer-events: none;
+}
+
+@media only screen and (max-width: 650px) {
+    .deck {
+        width: 500px;
+        min-height: 600px;
+   }
+    .deck .card {
+        height: 100px;
+        width: 100px;
+   }
+    .score-panel {
+        min-width: 450px;
+   }
+}
+
+@media only screen and (max-width: 490px) {
+    .deck {
+        width: 420px;
+        min-height: 490px;
+   }
+    .deck .card {
+        height: 77px;
+        width: 77px;
+   }
+    .score-panel {
+        min-width: 380px;
+   }
+}
+
+@media only screen and (max-width: 430px) {
+    .deck {
+        width: 380px;
+        min-height: 490px;
+   }
+    .deck .card {
+        height: 75px;
+        width: 75px;
+   }
+    .score-panel {
+        min-width: 340px;
+   }
+}
+
+@media only screen and (max-width: 405px) {
+    .deck {
+        width: 360px;
+        min-height: 400px;
+   }
+    .deck .card {
+        height: 70px;
+        width: 70px;
+   }
+}
+
+@media only screen and (max-width: 370px) {
+    .deck {
+        width: 320px;
+        min-height: 380px;
+   }
+    .deck .card {
+        height: 62px;
+        width: 62px;
+   }
+    h1 {
+        font-size: 35px;
+   }
+    .score-panel {
+        min-width: 300px;
+   }
+}
+
+@media only screen and (max-width: 340px) {
+    .deck {
+        width: 300px;
+        min-height: 350px;
+   }
+    .deck .card {
+        height: 60px;
+        width: 60px;
+   }
+    h1 {
+        font-size: 35px;
+   }
+    #minutes {
+        padding-left: 10px;
+   }
+}
+
+@media only screen and (max-width: 320px) {
+    .deck {
+        width: 297px;
+        min-height: 390px;
+   }
+    .deck .card {
+        height: 55px;
+        width: 55px;
+   }
+    h1 {
+        font-size: 30px;
+   }
+    .score-panel {
+        min-width: 280px;
+   }
+    .restart,.move{
+        font-size: 0.7em;
+   }
+    .star{
+        font-size: 90%;
+   }
+}
+
+@media only screen and (max-width: 300px) {
+    .deck {
+        width: 277px;
+        min-height: 390px;
+        padding: 15px;
+   }
+    .deck .card {
+        height: 55px;
+        width: 55px;
+   }
+    h1 {
+        font-size: 30px;
+   }
+    .score-panel {
+        min-width: 250px;
+   }
+}
+
+@media only screen and (max-width: 260px) {
+    .deck {
+        width: 220px;
+        min-height: 370px;
+        padding: 5px;
+   }
+    .deck .card {
+        height: 50px;
+        width: 50px;
+   }
+    h1 {
+        font-size: 20px;
+   }
+    .score-panel {
+        min-width: 210px;
+   }
+    .restart,.move{
+        font-size: 0.6em;
+   }
+    .star{
+        font-size: 80%;
+   }
+}
+

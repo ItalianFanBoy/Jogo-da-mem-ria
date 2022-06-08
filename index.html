@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Jogo</title>
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link rel="stylesheet prefetch" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="https://i.imgur.com/ERZ3vGs.png" rel="shortcut icon">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Jodo da Memória</h1>
+        </header>
+
+        <section class="score-panel">
+
+            <ul class="stars">
+                <li><i id="starOne" class="fa fa-star star"></i></li>
+                <li><i id="starTwo" class="fa fa-star star"></i></li>
+                <li><i id="starThree" class="fa fa-star star"></i></li>
+            </ul>
+
+            <span class="moves left">0</span> Movimentos
+
+            <span id="minutes" class="hide"></span>:<span id="seconds" class="hide"></span>
+
+            <div class="restart right">
+                <i class="fa fa-repeat"></i> Reiniciar
+            </div>
+
+        </section>
+
+        <ul class="deck">
+
+        </ul>
+    </div>
+
+    <!-- Modal You won-->
+    <div class="modal fade text-center" id="popUp" tabindex="-1" role="dialog"  aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered" role="document">
+
+            <div class="modal-content">
+
+                <div class="modal-body">
+
+                    <h5 class="modal-title font-big" id="exampleModal">You Won!</h5>
+
+                    <p id="popStar">
+                        <i id="star" class="fa fa-star star big "></i>
+                        <i id="starr" class="fa fa-star star big"></i>
+                        <i id="starrr" class="fa fa-star star big "></i>
+                    </p>
+
+                    <p class="font-small">Ends In: <br>
+
+                        <span id="minute"></span>:<span id="second"></span></p>
+
+                    <button  type="button" class="again btn btn-primary" data-dismiss="modal" aria-label="Close">
+                      Jogar novamente!
+                    </button>
+
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">
+                      Close
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal You lost-->
+    <div class="modal fade text-center" id="popUpLose" tabindex="-1" role="dialog"  aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered" role="document">
+
+            <div class="modal-content">
+
+                <div class="modal-body">
+
+                    <h5 class="modal-title font-big" id="exampleModalLongTitle">Você perdeu</h5>
+
+                    <div class="restart ">
+                        <i class="fa fa-repeat bigger again"  data-dismiss="modal" aria-label="Close"></i>
+                    </div>
+
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" aria-label="Close">
+                       Close
+                    </button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--JavaScript-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
